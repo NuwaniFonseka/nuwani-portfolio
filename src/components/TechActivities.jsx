@@ -6,8 +6,8 @@ const techActivities = [
   {
     icon: "🏢",
     title: "IFS Industry Visit",
-    desc: "Participated in a guided industry visit to IFS HQ. Learned about enterprise software and agile workflows.",
-    images: ["/events/ifs1.jpg", "/events/ifs2.jpg", "/events/ifs1.jpg", "/events/ifs2.jpg"],
+    desc: "Participated in an industry visit to IFS R&D International in Colombo, Sri Lanka, organized to provide real-world insights into enterprise software and agile practices. The session included facility tours, professional workshops, and networking with IFS employees, bridging academic learning with industry application.",
+    images: ["/events/ifs1.jpg", "/events/ifs2.jpg", "/events/ifs3.jpg", "/events/IFS.png","/events/ifs4.jpg","/events/ifs5.jpg"],
   },
   {
     icon: "💡",
@@ -16,10 +16,10 @@ const techActivities = [
     images: ["/events/perituza1.jpeg", "/events/perituza1.jpeg", "/events/perituza1.jpeg"],
   },
   {
-    icon: "🎤",
-    title: "SLIIT Career Week – Tech Panel Discussion",
-    desc: "Panel discussions with tech professionals on internships, trends, and branding.",
-    images: ["/events/careerweek1.jpg", "/events/careerweek1.jpg"],
+    icon: "🚀",
+    title: "Postman GenAI + API Tour 2025",
+    desc: "Explored Generative AI and modern API innovation during the Sri Lanka tour hosted by Postman and Pieces for Developers. Hands-on sessions and future-focused discussions enhanced our developer journey.",
+    images: ["/events/postman1.jpeg", "/events/postman2.jpeg", "/events/postman3.png","/events/postman4.png",],
   },
 ];
 
