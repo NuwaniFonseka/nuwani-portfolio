@@ -58,7 +58,7 @@ const App = () => {
               View Work
             </a>
             <a
-              href="/Nuwani-Fonseka-CV.pdf"
+              href="/NuwaniResume.pdf"
               download
               className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-primary hover:text-black hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
@@ -191,40 +191,58 @@ const App = () => {
           {/* Individual Project Card */}
           {[
             {
-              title: "DonatePath",
-              image: "/donate.png",
-              desc: "A Flutter-based donation app that connects donors, volunteers, and organizations with real-time notifications, analytics, and Firebase integration.",
-              link: "/projects/donatepath",
+              title: "Automated Testing Project",
+              image: "/testing.jpeg",
+              desc: "Automation test suite using <strong>Cypress</strong> for <strong>UI/API testing and Integration testing</strong> on a <strong>React</strong> app. Included <strong>login validation</strong> and <strong>result logging</strong>.",
+              link: "/projects/automation",
+            },
+            {
+              title: "FoodFlix – Food Delivery System",
+              image: "/foodflix.jpeg",
+              desc: "<strong>Microservices-based</strong> system with <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>JWT</strong>, and <strong>Stripe</strong>.",
+              link: "/projects/foodflix",
+            },
+            {
+              title: "School Management System",
+              image: "/school-management.jpg",
+              desc: "<strong>Java</strong> project using <strong>OSGi</strong> and <strong>Microkernel architecture</strong> for fee and library modules.",
+              link: "/projects/school",
+            },
+            {
+              title: "Countries Explorer",
+              image: "/countries.png",
+              desc: "Responsive <strong>React</strong> app using <strong>REST Countries API</strong>, <strong>Tailwind CSS</strong>, and <strong>Jest</strong>.",
+              link: "/projects/countries",
+            },
+            {
+              title: "Finance Tracker",
+              image: "/finance.jpg",
+              desc: "<strong>Node.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong> API for budgeting, reports, and <strong>JWT</strong> auth.",
+              link: "/projects/financetracker",
             },
             {
               title: "Shopping Eye",
-              image: "/shopping.jpeg",
-              desc: "MERN stack mall navigation app using QR codes and 3D maps with Three.js for enhancing mall user experience.",
+              image: "/shoppingg.jpg",
+              desc: "<strong>MERN</strong> app with <strong>QR scanning</strong>for mall navigation.",
               link: "/projects/shoppingeye",
             },
             {
               title: "Zero Waste",
-              image: "/donate.png",
-              desc: "MERN-based garbage management platform with test-case design, smart scheduling, and peak-time analytics for municipalities.",
+              image: "/waste.jpg",
+              desc: "<strong>MERN</strong> waste management app with <strong>scheduling</strong> and <strong>analytics</strong>.",
               link: "/projects/zerowaste",
             },
             {
               title: "Vehicle Rental System",
-              image: "/vehicle.jpg",
-              desc: "Full-stack MERN app that lets users rent vehicles with CRUD support, booking control, and seamless UX flow.",
+              image: "/carrent.jpg",
+              desc: "<strong>MERN</strong> app for vehicle rentals with <strong>CRUD</strong> and booking flow.",
               link: "/projects/vehiclerental",
             },
             {
-              title: "Shopping Eye",
-              image: "/shopping.jpeg",
-              desc: "MERN stack mall navigation app using QR codes and 3D maps with Three.js for enhancing mall user experience.",
-              link: "/projects/shoppingeye",
-            },
-            {
-              title: "Zero Waste",
-              image: "/donate.png",
-              desc: "MERN-based garbage management platform with test-case design, smart scheduling, and peak-time analytics for municipalities.",
-              link: "/projects/zerowaste",
+              title: "DonatePath",
+              image: "/Donate.jpg",
+              desc: "<strong>Flutter</strong> app for donations with <strong>Firebase</strong>, <strong>notifications</strong>, and <strong>analytics</strong>.",
+              link: "/projects/donatepath",
             },
           ].map((project, idx) => (
             <a
@@ -240,9 +258,10 @@ const App = () => {
                 alt={project.title}
                 className="rounded mb-4 w-full h-[200px] object-cover"
               />
-              <p className="text-[15px] text-gray-800 leading-relaxed">
-                {project.desc}
-              </p>
+              <p
+                className="text-[15px] text-gray-800 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: project.desc }}
+              ></p>
             </a>
           ))}
         </div>
@@ -261,25 +280,23 @@ const App = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
           {[
             "React.js",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
             "Tailwind CSS",
             "Firebase",
             "Shopify",
-            "Figma",
-            "PostgreSQL",
+            "HTML / CSS",
+            "Vite",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "SQL / MySQL",
             "JavaScript",
             "Java",
-            "SQL / MySQL",
-            "Git & GitHub",
-            "Android Studio",
-            "Kotlin",
-            "HTML / CSS",
-            "WordPress",
             "Docker",
             "Kubernetes",
+            "Kotlin",
+            "WordPress",
             "Selenium",
+            "Cypress",
           ].map((skill, idx) => (
             <div
               key={idx}

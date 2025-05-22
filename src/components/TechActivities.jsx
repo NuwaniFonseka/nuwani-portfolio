@@ -9,12 +9,12 @@ const techActivities = [
     desc: "Participated in an industry visit to IFS R&D International in Colombo, Sri Lanka, organized to provide real-world insights into enterprise software and agile practices. The session included facility tours, professional workshops, and networking with IFS employees, bridging academic learning with industry application.",
     images: ["/events/ifs1.jpg", "/events/ifs2.jpg", "/events/ifs3.jpg", "/events/IFS.png","/events/ifs4.jpg","/events/ifs5.jpg"],
   },
-  {
-    icon: "💡",
-    title: "Perituza Workshop @ Cinnamon Lakeside",
-    desc: "Attended a workshop by Perituza on innovation, digital transformation, and career pathways.",
-    images: ["/events/perituza1.jpeg", "/events/perituza1.jpeg", "/events/perituza1.jpeg"],
-  },
+  // {
+  //   icon: "💡",
+  //   title: "Perituza Workshop @ Cinnamon Lakeside",
+  //   desc: "Attended a workshop by Perituza on innovation, digital transformation, and career pathways.",
+  //   images: ["/events/perituza1.jpeg", "/events/perituza1.jpeg", "/events/perituza1.jpeg"],
+  // },
   {
     icon: "🚀",
     title: "Postman GenAI + API Tour 2025",
@@ -33,16 +33,20 @@ const TechActivities = () => {
       </h2>
       <div className="space-y-6 max-w-5xl mx-auto">
         {techActivities.map((item, index) => (
-          <button
-            key={index}
-            onClick={() => setSelected(item)}
-            className="w-full text-left bg-[#1c1c1c] p-6 rounded-lg shadow hover:shadow-lg transition block"
-          >
-            <h3 className="text-xl font-semibold text-primary mb-1">
-              {item.icon} {item.title}
-            </h3>
-            <p className="text-gray-300">{item.desc}</p>
-          </button>
+         <button
+  key={index}
+  onClick={() => setSelected(item)}
+  className="w-full text-left bg-[#1c1c1c] p-6 rounded-lg shadow hover:shadow-lg transition block"
+>
+  <h3 className="text-xl font-semibold text-primary mb-1">
+    {item.icon} {item.title}
+  </h3>
+  <p className="text-gray-300 mb-2">{item.desc}</p>
+  <div className="text-sm text-gray-400 flex items-center gap-2">
+    <span>📸 View Photos</span>
+  </div>
+</button>
+
         ))}
       </div>
 
