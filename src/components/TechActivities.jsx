@@ -9,12 +9,12 @@ const techActivities = [
     desc: "Participated in an industry visit to IFS R&D International in Colombo, Sri Lanka, organized to provide real-world insights into enterprise software and agile practices. The session included facility tours, professional workshops, and networking with IFS employees, bridging academic learning with industry application.",
     images: ["/events/ifs1.jpg", "/events/ifs2.jpg", "/events/ifs3.jpg", "/events/IFS.png","/events/ifs4.jpg","/events/ifs5.jpg"],
   },
-  // {
-  //   icon: "💡",
-  //   title: "Perituza Workshop @ Cinnamon Lakeside",
-  //   desc: "Attended a workshop by Perituza on innovation, digital transformation, and career pathways.",
-  //   images: ["/events/perituza1.jpeg", "/events/perituza1.jpeg", "/events/perituza1.jpeg"],
-  // },
+  {
+    icon: "💡",
+    title: "Perituza Workshop",
+    desc: "Attended a workshop by Perituza on innovation, digital transformation, and career pathways.",
+    images: ["/events/perituza1.jpg", "/events/perituza2.jpg", "/events/perituza3.jpg", "/events/perituz4.jpg", "/events/perituza13.jpg", "/events/perituza6.jpg","/events/perituza8.jpg", "/events/perituza9.jpg", "/events/perituza12.jpg", "/events/perituza11.jpg",],
+  },
   {
     icon: "🚀",
     title: "Postman GenAI + API Tour 2025",

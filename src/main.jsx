@@ -7,6 +7,8 @@ import ShoppingEye from "./pages/ShoppingEye";
 import ZeroWaste from "./pages/ZeroWaste";
 import VehicleRental from "./pages/VehicleRental";
 import "./index.css";
+import FoodFlix from "./pages/FoodFlix";
+import AutomatedTesting from "./pages/Cypress";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -16,6 +18,8 @@ createRoot(document.getElementById("root")).render(
       <Route path="/projects/shoppingeye" element={<ShoppingEye />} />
       <Route path="/projects/zerowaste" element={<ZeroWaste />} />
       <Route path="/projects/vehiclerental" element={<VehicleRental />} />
+      <Route path="/projects/foodflix" element={<FoodFlix />} />
+      <Route path="/projects/automation" element={<AutomatedTesting />} />
     </Routes>
   </BrowserRouter>
 );

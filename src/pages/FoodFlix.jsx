@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/public/shopping-eye/shop1.jpg", 
-  "/public/shopping-eye/shop4.jpg", 
-  "/public/shopping-eye/shop5.jpg", 
+  "/public/foodflix/food1.jpg", 
+  "/public/foodflix/food2.jpg", 
 ];
 
-const ShoppingEye = () => {
+const FoodFlix = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoading, setImageLoading] = useState({});
 
@@ -36,14 +35,15 @@ const ShoppingEye = () => {
           {/* Header */}
           <div className="text-center transform transition-all duration-1000 delay-200">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-lime-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-4 animate-pulse">
-              Shopping Eye
+              FoodFlix
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-lime-400 to-green-500 mx-auto rounded-full"></div>
-          </div>
-          {/* GitHub Link */}
+            <p className="text-xl text-gray-400 mb-6">Cloud-Native Food Ordering & Delivery System</p>
+            <div className="w-32 h-1 bg-gradient-to-r from-lime-400 to-green-500 mx-auto rounded-full mb-6"></div>
+            
+            {/* GitHub Link */}
             <div className="flex justify-center">
               <a
-                href="https://github.com/NuwaniFonseka/Shopping-Eye-Extended_Shopping-Mall-Application"
+                href="https://github.com/NuwaniFonseka/FoodFlix"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-lime-500 to-green-600 text-black px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-lime-500/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"
@@ -54,13 +54,15 @@ const ShoppingEye = () => {
                 View on GitHub
               </a>
             </div>
+          </div>
+          
           {/* Image Section */}
           <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-gray-700/50 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} hover:shadow-lime-500/20 hover:border-lime-500/30 hover:scale-[1.02]`}>
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-lime-400 to-green-500 bg-clip-text text-transparent mb-6 flex items-center">
               <span className="mr-3 text-2xl animate-bounce">📸</span>
               Screenshots
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
               {images.map((img, idx) => (
                 <div 
                   key={idx} 
@@ -74,7 +76,7 @@ const ShoppingEye = () => {
                   )}
                   <img
                     src={img}
-                    alt={`Shopping Eye Screenshot ${idx + 1}`}
+                    alt={`FoodFlix Screenshot ${idx + 1}`}
                     className="rounded-xl w-full h-56 object-cover border-2 border-gray-600 group-hover:border-lime-500 transition-all duration-300 filter group-hover:brightness-110"
                     onLoadStart={() => handleImageStart(idx)}
                     onLoad={() => handleImageLoad(idx)}
@@ -91,22 +93,22 @@ const ShoppingEye = () => {
           {/* Description Section */}
           <div className={`bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-gray-700/50 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} hover:shadow-lime-500/20 hover:border-lime-500/30`}>
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-lime-400 to-green-400 bg-clip-text text-transparent mb-6 flex items-center">
-              <span className="mr-3 text-2xl animate-bounce delay-100">🛒</span>
+              <span className="mr-3 text-2xl animate-bounce delay-100">🍕</span>
               Project Overview
             </h2>
             
             <div className="text-gray-300 space-y-6 mb-8 leading-relaxed">
               <p className="transform transition-all duration-700 delay-600 hover:text-white hover:scale-[1.01]">
-                <strong className="text-lime-400">Shopping Eye</strong> is an innovative MERN stack-based Shopping Mall Navigation System developed as a collaborative university project at SLIIT. This comprehensive system was designed to revolutionize the shopping experience through advanced navigation features, interactive mall exploration, and intelligent shop management capabilities.
+                <strong className="text-lime-400">FoodFlix</strong> is a comprehensive cloud-native food ordering and delivery platform inspired by UberEats, built using modern microservices architecture. This scalable system was developed as a university project at SLIIT, designed to handle the complete food delivery workflow from restaurant management to customer satisfaction.
               </p>
               <p className="transform transition-all duration-700 delay-700 hover:text-white hover:scale-[1.01]">
-                As part of a three-member development team including <strong className="text-green-400">Tiny Vilan</strong> and <strong className="text-emerald-400">Yasiru</strong>, I took primary responsibility for the shop management backend, analytics systems, and business intelligence tools, focusing on creating comprehensive solutions for shop owners and enhancing the customer experience.
+                As part of the development team, I took primary responsibility for the <strong className="text-lime-400">user authentication system</strong>, <strong className="text-green-400">payment integration</strong>, and <strong className="text-emerald-400">notification services</strong>, focusing on creating secure, seamless user experiences and reliable transaction processing.
               </p>
               <p className="transform transition-all duration-700 delay-800 hover:text-white hover:scale-[1.01]">
-                The system was built using <strong className="text-lime-400">React.js</strong> for the frontend, <strong className="text-green-400">Node.js</strong> and <strong className="text-emerald-400">Express.js</strong> for the backend API, and <strong className="text-lime-300">MongoDB</strong> for data management. The interface is styled with <strong className="text-green-300">Tailwind CSS</strong> to ensure a modern, responsive design across all devices.
+                The platform was built using <strong className="text-lime-400">React.js</strong> for the frontend, <strong className="text-green-400">Node.js</strong> and <strong className="text-emerald-400">Express.js</strong> for backend services, and <strong className="text-lime-300">MongoDB</strong> for data persistence. The system is containerized with <strong className="text-green-300">Docker</strong> and orchestrated using <strong className="text-lime-300">Kubernetes</strong> for scalable deployment.
               </p>
               <p className="transform transition-all duration-700 delay-900 hover:text-white hover:scale-[1.01]">
-                The project features advanced <strong className="text-lime-400">skin tone and body type-based clothing recommendations</strong> tailored to individual user preferences, along with precise <strong className="text-green-400">location mapping</strong> that shows users exactly where specific clothing items can be found within the shopping mall, creating a truly personalized and efficient shopping experience.
+                Key features include real-time <strong className="text-lime-400">order tracking</strong>, secure <strong className="text-green-400">payment processing via Stripe</strong>, <strong className="text-emerald-400">role-based access control</strong>, and comprehensive <strong className="text-lime-400">email notification system</strong>, creating a complete food delivery ecosystem similar to industry-leading platforms.
               </p>
             </div>
             
@@ -118,13 +120,13 @@ const ShoppingEye = () => {
               </h3>
               <div className="text-gray-300 space-y-4">
                 {[
-                  { icon: "🏪", title: "Complete Shop Management CRUD System", desc: "Designed and implemented full Create, Read, Update, Delete operations for shop profiles, enabling shop owners to manage their business information, operating hours, contact details, and store policies." },
-                  { icon: "📦", title: "Product Inventory Management", desc: "Developed comprehensive CRUD functionality for shop items, allowing shop owners to add, edit, update, and remove products with detailed information including images, descriptions, pricing, and availability." },
-                  { icon: "📊", title: "Individual Shop Dashboards", desc: "Created personalized dashboard interfaces for each shop, providing shop owners with centralized access to their business metrics, performance indicators, and management tools." },
-                  { icon: "🔥", title: "Popular Products Analytics", desc: "Implemented real-time tracking and display systems to identify and showcase the most popular products for each shop, helping shop owners understand customer preferences and optimize their inventory." },
-                  { icon: "📈", title: "Sales Analytics & Reporting", desc: "Developed comprehensive analytics engine that generates interactive charts and exportable PDF reports, providing shop owners with detailed insights into their sales performance, trends, and customer behavior patterns." },
-                  { icon: "💬", title: "Customer Feedback System", desc: "Built a complete feedback management system that displays customer reviews and ratings for relevant shops, enabling shop owners to monitor their reputation and respond to customer concerns." },
-                  { icon: "🗺️", title: "Clothing Location Integration", desc: "Implemented location mapping functionality that shows users the exact mall location where specific clothing items matching their preferences can be found, enhancing the shopping navigation experience." }
+                  { icon: "🔐", title: "User Authentication System", desc: "Designed and implemented comprehensive user registration and login functionality with secure password hashing, JWT token management, and session handling for seamless user experiences." },
+                  { icon: "👥", title: "Role-Based Access Control", desc: "Developed sophisticated authorization system with multiple user roles (Customer, Restaurant Owner, Delivery Partner, Admin) ensuring proper access permissions and security boundaries." },
+                  { icon: "💳", title: "Stripe Payment Integration", desc: "Implemented secure payment processing using Stripe API, including payment intent creation, webhook handling, refund processing, and PCI-compliant transaction management." },
+                  { icon: "📧", title: "Email Notification System", desc: "Built comprehensive email notification service using SendGrid for order confirmations, status updates, payment receipts, and delivery notifications with custom email templates." },
+                  { icon: "🔔", title: "Real-time Notifications", desc: "Developed notification infrastructure for instant updates on order status changes, payment confirmations, and delivery tracking information." },
+                  { icon: "🛡️", title: "Security Implementation", desc: "Implemented security best practices including input validation, SQL injection prevention, XSS protection, and secure API endpoint authentication." },
+                  { icon: "📱", title: "Responsive User Interface", desc: "Created responsive authentication flows and payment interfaces ensuring seamless user experience across desktop and mobile devices." }
                 ].map((item, idx) => (
                   <div key={idx} className={`transform transition-all duration-500 delay-${(idx + 1) * 100} hover:translate-x-2 hover:scale-[1.02] p-3 rounded-lg hover:bg-gradient-to-r hover:from-lime-900/20 hover:to-green-900/20 border-l-4 border-lime-500/50 hover:border-lime-400`}>
                     <p>
@@ -139,7 +141,7 @@ const ShoppingEye = () => {
               </div>
             </div>
             
-            {/* Team Project Features */}
+            {/* Complete System Features */}
             <div className="mt-8 mb-8 transform transition-all duration-700 delay-1200">
               <h3 className="text-2xl font-semibold bg-gradient-to-r from-lime-400 to-green-400 bg-clip-text text-transparent mb-6 flex items-center">
                 <span className="mr-3 text-xl animate-spin-slow">✨</span>
@@ -147,18 +149,18 @@ const ShoppingEye = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { feature: "QR Code Scanning", desc: "Instant location identification through strategically placed QR codes", type: "team" },
-                  { feature: "3D Mall Visualization", desc: "Interactive Three.js-powered 3D model for immersive exploration", type: "team" },
-                  { feature: "Advanced Navigation", desc: "Step-by-step directions with optimal route planning", type: "team" },
-                  { feature: "Shop Profile Management", desc: "Complete CRUD operations for shop information", type: "my" },
-                  { feature: "Product Inventory System", desc: "Full CRUD functionality for shop items and product catalogs", type: "my" },
-                  { feature: "Personalized Shop Dashboards", desc: "Individual dashboards for each shop owner with key metrics", type: "my" },
-                  { feature: "Popular Products Tracking", desc: "Real-time identification and display of most popular items per shop", type: "my" },
-                  { feature: "Sales Analytics Engine", desc: "Interactive charts and PDF report generation for business insights", type: "my" },
-                  { feature: "Customer Feedback Management", desc: "Rating and review system with feedback display for shops", type: "my" },
-                  { feature: "Personalized Clothing Recommendations", desc: "Skin tone and body type-based clothing suggestions tailored to user preferences", type: "team" },
-                  { feature: "Clothing Location Mapping", desc: "Shows exact mall locations where recommended clothing items can be found", type: "my" },
-                  { feature: "Responsive Design", desc: "Seamless experience across desktop, tablet, and mobile devices", type: "team" }
+                  { feature: "User Authentication & Authorization", desc: "Secure login/registration with role-based access control", type: "my" },
+                  { feature: "Payment Processing", desc: "Stripe integration for secure card payments and transaction handling", type: "my" },
+                  { feature: "Email Notification System", desc: "Automated email services for order updates and confirmations", type: "my" },
+                  { feature: "Restaurant Management", desc: "Complete restaurant profile and menu management system", type: "team" },
+                  { feature: "Order Management", desc: "Full order lifecycle from placement to delivery completion", type: "team" },
+                  { feature: "Real-time Order Tracking", desc: "Live tracking of order status and delivery progress", type: "team" },
+                  { feature: "Delivery Partner System", desc: "Driver assignment, route optimization, and delivery management", type: "team" },
+                  { feature: "Admin Dashboard", desc: "Comprehensive admin panel for system monitoring and management", type: "team" },
+                  { feature: "Customer Reviews & Ratings", desc: "Review system for restaurants and delivery experiences", type: "team" },
+                  { feature: "Search & Filtering", desc: "Advanced search and filtering for restaurants and food items", type: "team" },
+                  { feature: "Cart Management", desc: "Persistent shopping cart with item customization options", type: "team" },
+                  { feature: "Microservices Architecture", desc: "Scalable containerized services with Docker and Kubernetes", type: "team" }
                 ].map((item, idx) => (
                   <div key={idx} className={`p-4 rounded-lg border transform transition-all duration-500 delay-${idx * 50} hover:scale-105 hover:shadow-lg ${item.type === 'my' ? 'bg-gradient-to-r from-lime-900/20 to-green-900/20 border-lime-500/30 hover:border-lime-400' : 'bg-gradient-to-r from-gray-800/20 to-gray-700/20 border-gray-600/30 hover:border-gray-500'}`}>
                     <h4 className={`font-semibold ${item.type === 'my' ? 'text-lime-400' : 'text-gray-300'} flex items-center justify-between`}>
@@ -179,17 +181,17 @@ const ShoppingEye = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
                 {[
-                  { tech: "Frontend", detail: "React.js with modern hooks and state management for dynamic user interfaces", color: "lime", highlight: false },
-                  { tech: "Backend", detail: "Node.js with Express.js RESTful API architecture for scalable server operations", color: "green", highlight: false },
-                  { tech: "Database", detail: "MongoDB for flexible data storage with collections for shops, products, users, and feedback", color: "emerald", highlight: false },
-                  { tech: "3D Graphics", detail: "Three.js for interactive 3D mall modeling and visualization (Team implementation)", color: "green", highlight: false },
-                  { tech: "Styling", detail: "Tailwind CSS for responsive, utility-first design across all components", color: "lime", highlight: false },
-                  { tech: "QR Integration", detail: "Camera API integration for seamless QR code scanning (Team implementation)", color: "emerald", highlight: false },
-                  { tech: "My Backend Systems", detail: "CRUD API endpoints for shop and product management with authentication and authorization", color: "lime", highlight: true },
-                  { tech: "Analytics Engine", detail: "Custom analytics system with Chart.js for data visualization and PDF generation (My implementation)", color: "green", highlight: true },
-                  { tech: "Dashboard Architecture", detail: "Component-based dashboard system with real-time data updates (My implementation)", color: "emerald", highlight: true },
-                  { tech: "Feedback System", detail: "Rating aggregation system with review management and display functionality (My implementation)", color: "lime", highlight: true },
-                  { tech: "Recommendation Engine", detail: "Algorithm for skin tone and body type-based clothing suggestions with location mapping", color: "green", highlight: false }
+                  { tech: "Frontend Framework", detail: "React.js with modern hooks and state management for dynamic user interfaces", color: "lime", highlight: false },
+                  { tech: "Backend Services", detail: "Node.js with Express.js RESTful API architecture for microservices", color: "green", highlight: false },
+                  { tech: "Database", detail: "MongoDB for flexible document storage with collections for users, orders, and restaurants", color: "emerald", highlight: false },
+                  { tech: "Authentication System", detail: "JWT-based authentication with bcrypt password hashing and role-based authorization (My implementation)", color: "lime", highlight: true },
+                  { tech: "Payment Gateway", detail: "Stripe API integration for secure payment processing and webhook handling (My implementation)", color: "green", highlight: true },
+                  { tech: "Email Service", detail: "SendGrid integration for transactional emails and notification system (My implementation)", color: "emerald", highlight: true },
+                  { tech: "Containerization", detail: "Docker containerization for all microservices with optimized images", color: "lime", highlight: false },
+                  { tech: "Orchestration", detail: "Kubernetes deployment with auto-scaling and load balancing capabilities", color: "green", highlight: false },
+                  { tech: "Styling Framework", detail: "Tailwind CSS for responsive, utility-first design across all components", color: "emerald", highlight: false },
+                  { tech: "Security Implementation", detail: "Input validation, XSS protection, and secure API endpoints (My implementation)", color: "lime", highlight: true },
+                  { tech: "Real-time Communication", detail: "WebSocket integration for live order tracking and notifications", color: "green", highlight: false }
                 ].map((item, idx) => (
                   <div key={idx} className={`p-4 rounded-lg border transform transition-all duration-500 delay-${idx * 75} hover:scale-105 hover:-translate-y-1 ${item.highlight ? `bg-gradient-to-r from-${item.color}-900/30 to-${item.color}-800/30 border-${item.color}-500/40 hover:border-${item.color}-400 hover:shadow-${item.color}-500/25` : 'bg-gray-800/30 border-gray-600/30 hover:border-gray-500'}`}>
                     <h4 className={`font-semibold text-${item.color}-400 flex items-center justify-between`}>
@@ -207,23 +209,41 @@ const ShoppingEye = () => {
               <div className="p-4 bg-gradient-to-r from-lime-900/20 to-green-900/20 rounded-lg border border-lime-500/20 hover:border-lime-400/40 transition-all duration-300">
                 <p className="text-gray-400">
                   <strong className="text-lime-400">My Technical Skills Demonstrated:</strong> 
-                  <span className="text-gray-300"> React.js · Node.js · Express.js · MongoDB · RESTful APIs · CRUD Operations · Data Analytics · Chart.js · PDF Generation · Dashboard Development · Feedback Systems · Backend Architecture · Database Design · Business Intelligence</span>
+                  <span className="text-gray-300"> React.js · Node.js · Express.js · MongoDB · JWT Authentication · Stripe API · SendGrid · RESTful APIs · Role-Based Access Control · Payment Processing · Email Services · Security Implementation · Microservices · Docker · Kubernetes</span>
                 </p>
               </div>
               
               <div className="p-4 bg-gradient-to-r from-gray-800/20 to-gray-700/20 rounded-lg border border-gray-600/20 hover:border-gray-500/40 transition-all duration-300">
                 <p className="text-gray-400">
                   <strong className="text-green-400">Team Technologies:</strong> 
-                  <span className="text-gray-300"> Three.js · QR Code Integration · 3D Modeling · Tailwind CSS · Responsive Design · Recommendation Algorithms</span>
+                  <span className="text-gray-300"> Tailwind CSS · WebSocket · Container Orchestration · Load Balancing · Order Management · Restaurant Management · Delivery Tracking · Admin Dashboard</span>
                 </p>
               </div>
               
               <div className="p-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20 rounded-lg border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
                 <p className="text-gray-400">
-                  <strong className="text-green-400">Duration:</strong> October 2024 | 
+                  <strong className="text-green-400">Duration:</strong> May 2025 | 
                   <strong className="text-lime-400"> Institution:</strong> SLIIT University Project | 
-                  <strong className="text-emerald-400"> Team:</strong> 3 members (Tiny Vilan, Yasiru, and myself)
+                  <strong className="text-emerald-400"> Architecture:</strong> Microservices with Docker & Kubernetes
                 </p>
+              </div>
+
+              {/* GitHub Repository Link */}
+              <div className="text-center pt-6">
+                <a
+                  href="https://github.com/NuwaniFonseka/FoodFlix"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-lime-500/30 hover:border-lime-400 text-lime-400 hover:text-lime-300 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group hover:shadow-lg hover:shadow-lime-500/25"
+                >
+                  <svg className="w-5 h-5 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <span className="flex items-center gap-1">
+                    <span>📂</span>
+                    Explore Source Code
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -232,14 +252,32 @@ const ShoppingEye = () => {
       
       {/* Floating Action Button */}
       <div className="fixed bottom-8 right-8 z-20">
-        <button className="bg-gradient-to-r from-lime-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-lime-500/50 transform hover:scale-110 transition-all duration-300 animate-bounce">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="bg-gradient-to-r from-lime-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-lime-500/50 transform hover:scale-110 transition-all duration-300 animate-bounce group"
+        >
+          <svg className="w-6 h-6 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </button>
       </div>
+
+      <style jsx>{`
+        .animate-spin-slow {
+          animation: spin 3s linear infinite;
+        }
+        
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default ShoppingEye;
+export default FoodFlix;
